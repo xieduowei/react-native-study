@@ -45,6 +45,18 @@ export default class page1 extends Component<Props> {
                         navigation.navigate('page3',{name:'动态的'})
                     }}
                 ></Button>
+                <Button
+                    title={'去bottom'}
+                    onPress={()=>{
+                        navigation.navigate('bottom',{name:'动态的'})
+                    }}
+                ></Button>
+                <Button
+                    title={'去top'}
+                    onPress={()=>{
+                        navigation.navigate('top',{name:'动态的'})
+                    }}
+                ></Button>
             </View>
         )
 
