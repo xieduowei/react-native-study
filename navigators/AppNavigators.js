@@ -134,7 +134,7 @@ const AppBottomNavigator = createBottomTabNavigator({
     tabBarOptions: {
         activeTintColor:'blue'
     }
-});;
+});
 const AppStackNavigator = createStackNavigator({
     HomePage: {
         screen: HomePage
