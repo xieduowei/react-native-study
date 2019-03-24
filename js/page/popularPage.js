@@ -46,7 +46,7 @@ export default class popular extends Component<Props> {
             }
         }))
         return (
-            <View style={{marginTop:31,flex:1}}>
+            <View style={{flex:1}}>
                 <TabNavigator/>
             </View>
         )

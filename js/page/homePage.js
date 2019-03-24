@@ -30,7 +30,9 @@ import my from './myPage'
 import favorite from './favoritePage'
 import NavigationUtil from './../navigator/NavigationUtil'
 
-import  {MaterialCommunityIcons} from 'react-native-vector-icons'
+import  Ionicons from  'react-native-vector-icons/Ionicons'
+import  MaterialIcons from  'react-native-vector-icons/MaterialIcons'
+import  AntDesign from  'react-native-vector-icons/AntDesign'
 
 type Props = {};
 export default class HomePage extends Component<Props> {
@@ -39,10 +41,12 @@ export default class HomePage extends Component<Props> {
             popular:{
                 screen:popular,
                 navigationOptions:{
+                    headerTitle:'123',
+                    title:'123',
                     tabBarLabel: "微信",
                     tabBarIcon: ({tintColor, focused}) => (
-                        <MaterialCommunityIcons
-                            name={'chat'}
+                        <Ionicons
+                            name={'ios-chatboxes'}
                             size={26}
                             style={{color: tintColor}}
                         />
@@ -50,15 +54,59 @@ export default class HomePage extends Component<Props> {
                 }
             },
             trending:{
-                screen:trending
+                screen:trending,
+                navigationOptions:{
+                    tabBarLabel: "通讯录",
+                    tabBarIcon: ({tintColor, focused}) => (
+                        <MaterialIcons
+                            name={'people'}
+                            size={26}
+                            style={{color: tintColor}}
+                        />
+                    )
+                }
             },
             my:{
-                screen:my
+                screen:my,
+                navigationOptions:{
+                    tabBarLabel: "发现",
+                    tabBarIcon: ({tintColor, focused}) => (
+                        <AntDesign
+                            name={'find'}
+                            size={26}
+                            style={{color: tintColor}}
+                        />
+                    )
+                }
             },
             favorite:{
-                screen:favorite
+                screen:favorite,
+                navigationOptions:{
+                    tabBarLabel: "我",
+                    tabBarIcon: ({tintColor, focused}) => (
+                        <Ionicons
+                            name={'ios-person'}
+                            size={20}
+                            style={{color: tintColor}}
+                        />
+                    )
+                }
             },
 
+        },{
+            tabBarOptions:{
+                activeTintColor:'#34a853',
+                tabStyle:{
+                    justifyContent:'center',
+                    alignItems:'center',
+                    //borderTopWidth:1,
+                    //borderTopColor:'red'
+                },
+                style:{
+                    borderTopWidth:0.4,
+                    borderTopColor:'#ddd'
+                }
+            }
         }))
     }
     render() {
